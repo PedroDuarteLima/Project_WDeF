@@ -4,6 +4,7 @@ import { css } from "./assets/css/css";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Home, Login, Rastreio } from "./views";
+import AreaRestrita from "./views/arearestrita/AreaRestrita";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -20,7 +21,7 @@ export default function App() {
             headerTitleStyle: {
               fontWeight: "bold",
               alignSelf: "center",
-              fontSize: "20",
+              fontSize: 20,
             },
           }}
         />
@@ -30,7 +31,7 @@ export default function App() {
           component={Login}
         />
         <Stack.Screen name="Rastreio" component={Rastreio} />
-        {/* <Stack.Screen name="AreaRestrita" component={AreaRestrita} /> */}
+        <Stack.Screen name="AreaRestrita" component={AreaRestrita} />
       </Stack.Navigator>
     </NavigationContainer>
   );
