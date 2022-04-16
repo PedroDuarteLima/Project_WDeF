@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Text, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { Profile, Cadastro, Edicao } from "../index";
+
+const Tab = createMaterialBottomTabNavigator();
 
 export default function AreaRestrita() {
   const [user, setUser] = useState(null);
@@ -15,9 +19,10 @@ export default function AreaRestrita() {
   }, []);
 
   return (
-    <View>
-      <Text> Esta é a Área Restrita</Text>
-      <Text> Seja bem vindo {user}</Text>
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Cadastro" component={Cadastro} />
+      <Tab.Screen name="Edicao" component={Edicao} />
+    </Tab.Navigator>
   );
 }
