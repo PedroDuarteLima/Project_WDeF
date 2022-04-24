@@ -45,22 +45,30 @@ export default function Profile({ navigation }) {
       <MenuAreaRestrita title="Perfil" navigation={navigation} />
 
       <View>
-        <Text>{msg}</Text>
         <TextInput
+          style={css.input__senha}
           placeholder="Senha Antiga"
+          placeholderTextColor="#000"
           onChangeText={(text) => setSenhaAntiga(text)}
         />
         <TextInput
+          style={css.input__senha}
           placeholder="Nova Senha"
+          placeholderTextColor="#000"
           onChangeText={(text) => setNovaSenha(text)}
         />
         <TextInput
+          style={css.input__senha}
           placeholder="Confirmação da Nova Senha"
+          placeholderTextColor="#000"
           onChangeText={(text) => setConfNovaSenha(text)}
         />
-
-        <TouchableOpacity onPress={() => sendForm()}>
-          <Text>Trocar</Text>
+        <Text style={css.text__info}>{msg}</Text>
+        <TouchableOpacity
+          style={css.confirm__switch}
+          onPress={() => sendForm()}
+        >
+          <Text style={css.text}>Trocar</Text>
         </TouchableOpacity>
       </View>
     </View>

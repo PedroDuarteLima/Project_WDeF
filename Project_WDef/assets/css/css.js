@@ -98,6 +98,36 @@ const css = StyleSheet.create({
   containerTop: {
     justifyContent: "flex-start",
   },
+
+  input__senha: {
+    borderWidth: 1,
+    margin: 5,
+    padding: 6,
+    fontSize: 17,
+    borderRadius: 19,
+  },
+
+  text__info: {
+    alignSelf: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+    marginTop: 10,
+    color: "red",
+    marginBottom: 15,
+  },
+
+  confirm__switch: {
+    alignSelf: "center",
+    padding: 15,
+    borderRadius: 19,
+    backgroundColor: "#777",
+  },
+
+  text: {
+    fontWeight: "bold",
+    color: "#FFF",
+    margin: 5,
+  },
 });
 
 export { css };
